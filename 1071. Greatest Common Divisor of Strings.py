@@ -12,7 +12,7 @@ def gcdOfStrings(self, str1: str, str2: str) -> str:
         a = str2[0:i]
         if str1 == a*int(len(str1)/i) and str2 == a*int(len(str2)/i):
             fin = a
-
+    
     return fin
 
 
