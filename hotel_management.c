@@ -1006,7 +1006,25 @@ Node Enter_dets(){
 //================================================================================================================================================================================================================
 //================================================================================================================================================================================================================
 
+void comment(){
+    struct feedback{
+        int Room_ID;
+        str Feedback;
+        Struct feedback *next;
+    };
+    typedef struct feedback *feed;
+    void comment_feed(){
+        feed temp=(struct feedback *)malloc(sizeof(Struct feedback));
+        printf("Enter the Room_ID\n");
+        scanf("%d",&temp->Room_ID);
+        printf("Enter the feedback\n");
+        Scanf("%s",&temp->Feedback);
+        temp->next=;
 
+    }
+
+
+}
 
 
 
