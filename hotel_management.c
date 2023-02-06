@@ -17,11 +17,11 @@ int curr_C1=0;
 struct details
 {
     /* data */
+    int ID;
     char name[50];
     int Adults;
     int room_no;
     char room_type;
-    int floor;
     int start_day;
     int end_day;
     int amount;
@@ -30,18 +30,20 @@ typedef struct details D;
 
 struct node{
     D info;
-    struct guest* next;
-    struct guest* prev;
+    struct node* next;
+    struct node* prev;
 };
-typedef struct guest* G;
+typedef struct node* Node;
 
-G createNode(){
-    G temp = (G)malloc(sizeof(struct node));
-    
-
+Node createNode(){
+    D base={0,"\0",0,0,"\0",0,0,0};
+    Node temp = (Node)malloc(sizeof(struct node));
+    temp->info =base;
+    temp->next =NULL;
+    temp->prev =NULL;
 }
 
-G Enter_dets(){
+Node Enter_dets(){
     char room_pref;
     int beds,i;
     printf("Enter room preference\n1.For type A\t2.For type B\t3.For type C");    
