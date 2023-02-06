@@ -97,7 +97,6 @@ void main(){
 
 
 
-
 //================================================================================================================================================================================================================
 //================================================================================================================================================================================================================
 
@@ -114,8 +113,8 @@ struct details
     int ID;
     char name[50];
     int Adults;
-    int room_no;
-    char room_type;
+    int children;
+    int room_type;
     int start_day;
     int end_day;
     int amount;
@@ -129,30 +128,33 @@ struct node{
 };
 typedef struct node* Node;
 
-Node createNode(){
-    D base={0,"\0",0,0,"\0",0,0,0};
+Node createNode(D base){
     Node temp = (Node)malloc(sizeof(struct node));
     temp->info =base;
     temp->next =NULL;
     temp->prev =NULL;
+    return temp;
 }
 
 Node Enter_dets(){
-    char room_pref;
+    char room_pref,l;
     int beds,i;
     printf("Enter room preference\n1.For type A\t2.For type B\t3.For type C");    
     scanf("%s",&room_pref);
     if(room_pref==1){
         i=check(1);
+        l=1;
     }
     else if(room_pref==2){
         printf("Enter the number of rooms(beds) [2,3]");
         scanf("%d",&beds);
         if(beds==2){
             i=check(3);
+            l=3;
         }
         else if(beds==3){
            i=check(2);
+           l=2;
         }
     }
     else if(room_pref==3){
@@ -160,13 +162,34 @@ Node Enter_dets(){
         scanf("%d",&beds);
         if(beds==1){
             i=check(5);
+            l=5;
         }
         else if(beds==2){
             i=check(4);
+            l=4;
         }
     }
 
     if(i){
+        D temp;
+        printf("Enter room ID");
+        scanf("%d",&temp.ID);
+        printf("Enter Name");
+        scanf("%s",&temp.name);
+        printf("Enter No. of adults");
+        scanf("%d",&temp.Adults);
+        printf("Enter No. of Children");
+        scanf("%d",&temp.children);
+        printf("Enter start day");
+        scanf("%d",&temp.start_day);
+        printf("Enter end day");
+        scanf("%d",&temp.end_day);
+        printf("Enter amount");
+        scanf("%d",&temp.amount);
+        temp.room_type = l;
+
+        Node N = createNode(temp);
+        printf("%d\t%s\t%d\t%d\t%d\t%d\t%d",temp.ID,temp.name,temp.Adults,temp.children,temp.start_day,temp.end_day,temp.amount);
 
 
     }
@@ -179,29 +202,6 @@ Node Enter_dets(){
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
