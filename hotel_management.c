@@ -37,22 +37,21 @@ int check(int n){
     }
 }
 
-void main(){
-    int ch=1,choice;
-    char pref;
-    while(ch){
-        printf("Menu\n1.Add guest\t2.Add comment\nEnter choice:");
-        scanf("%d",&choice);
-        switch(choice){
-            case 1:
-                Enter_dets();
-                break;
-            case 2:
-                printf("Enter the comment you want to add");
-                break;
-        }
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1007,9 +1006,25 @@ Node Enter_dets(){
 //================================================================================================================================================================================================================
 
 
+void comment(){
+    struct feedback{
+        int Room_ID;
+        str Feedback;
+        struct feedback *next;
+    };
+    typedef struct feedback *feed;
+    void comment_feed(){
+        feed temp=(struct feedback *)malloc(sizeof(Struct feedback));
+        printf("Enter the Room_ID\n");
+        scanf("%d",&temp->Room_ID);
+        printf("Enter the feedback\n");
+        Scanf("%s",&temp->Feedback);
+        temp->next=;
 
+    }
 
 
+}
 
 
 
@@ -1632,6 +1647,376 @@ Node Enter_dets(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//==============================================================================================================
+//                          MAIN FUNTION
+//========================================================================================================
+void main(){
+    int ch=1,choice;
+    char pref;
+    while(ch){
+        printf("Menu\n1.Add guest\t2.Add comment\nEnter choice:");
+        scanf("%d",&choice);
+        switch(choice){
+            case 1:
+                Enter_dets();
+                break;
+            case 2:
+                printf("Enter the comment you want to add");
+                break;
+        }
+    }
+}
 
 
 
