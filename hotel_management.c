@@ -115,6 +115,11 @@ void main(){
         switch(choice){
             case 1:
                 Enter_dets();
+                break;
+            case 2:
+                printf("Enter the comment you want to add");
+                break;
+
         }
 
     }
