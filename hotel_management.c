@@ -118,10 +118,13 @@ void main(){
             case 1:
                 Enter_dets();
                 break;
+<<<<<<< Updated upstream
             case 2:
                 printf("Enter the comment you want to add");
                 break;
 
+=======
+>>>>>>> Stashed changes
         }
 
     }
